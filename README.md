@@ -1,7 +1,7 @@
 # Remove from Coverage
 > Author: [Jack Warren](https://jackwarren.info)
 
-Manipulate `lcov.info` coverage files to ignore files matching given patterns. This can be used to exclude generated files from coverage reports.
+Manipulate `lcov.info` coverage files to ignore files matching given patterns. This can be used to exclude generated files from coverage reports, and is language-agnostic.
 
 ```text
 Remove files with paths matching given PATTERNs from the lcov.info FILE
