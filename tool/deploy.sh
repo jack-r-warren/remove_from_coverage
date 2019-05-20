@@ -11,4 +11,4 @@ cat <<EOF > ~/.pub-cache/credentials.json
 }
 EOF
 
-pub publish -f
+pub --trace publish -f
