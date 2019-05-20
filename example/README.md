@@ -42,3 +42,7 @@ pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -
 ```
 
 Now, `lcov.info` shows only the files we desire, so any reports/percentages generates from it will now be correct.
+
+> In general, note that generated files should not be added to source control as I've done here. I added `name.g.dart` and `.test_coverage.dart` so the example can be browsed online.
+>
+> Similarly, the entire coverage `directory` is not often necessary to add to source control.
