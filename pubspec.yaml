@@ -4,6 +4,9 @@ version: 1.0.0
 homepage: https://github.com/jack-r-warren/remove_from_coverage
 author: Jack Warren <jack@jackwarren.info>
 
+executables:
+  remove_from_coverage:
+
 environment:
   sdk: '>=2.2.0 <3.0.0'
 
