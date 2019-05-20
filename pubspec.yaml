@@ -8,7 +8,7 @@ executables:
   remove_from_coverage:
 
 environment:
-  sdk: '>=2.2.0 <3.0.0'
+  sdk: '>=2.1.0 <3.0.0'
 
 dependencies:
   args: ^1.4.4
