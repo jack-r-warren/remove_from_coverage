@@ -1,0 +1,14 @@
+name: remove_from_coverage
+description: A command-line tool to customize the contents of a coverage lcov.info file.
+version: 1.0.0
+homepage: https://github.com/jack-r-warren/remove_from_coverage
+author: Jack Warren <jack@jackwarren.info>
+
+environment:
+  sdk: '>=2.2.0 <3.0.0'
+
+dependencies:
+  args: ^1.4.4
+
+dev_dependencies:
+  pedantic: ^1.0.0
