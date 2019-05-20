@@ -1,3 +1,7 @@
+## 1.0.3-test-1
+
+- Switch deployment to dry-run to test `pub publish`
+
 ## 1.0.3
 
 - Attempt to support 2.1.0 to enable automatic deployment
