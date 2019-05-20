@@ -1,6 +1,8 @@
 # Remove from Coverage
 > Author: [Jack Warren](https://jackwarren.info)
 
+[![Build Status](https://travis-ci.com/jack-r-warren/remove_from_coverage.svg?branch=master)](https://travis-ci.com/jack-r-warren/remove_from_coverage) [![Pub](https://img.shields.io/pub/v/remove_from_coverage.svg)](https://pub.dartlang.org/packages/remove_from_coverage)
+
 Manipulate `lcov.info` coverage files to ignore files matching given patterns. This can be used to exclude generated files from coverage reports, and is language-agnostic.
 
 ```text
