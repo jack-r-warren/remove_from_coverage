@@ -23,6 +23,8 @@ Suppose we use the [`test_coverage`](https://pub.dev/packages/test_coverage) pac
 pub run test_coverage
 ```
 
+> Note! Since this example was created, `test_coverage` has been updated and now directly supports glob-based exclusion
+
 We're told that the code coverage is only 46% and the output `lcov.info` file is saved to the `coverage` directory.
 
 ### The Solution
