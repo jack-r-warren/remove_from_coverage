@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Documentation updates to direct users to double-check that they can't directly exclude files during coverage generation
+
 ## 1.0.3
 
 - Attempt to support 2.1.0 to enable automatic deployment
