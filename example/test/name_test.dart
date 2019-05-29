@@ -1,5 +1,7 @@
 import 'package:test/test.dart';
-import 'package:example_project/name.dart';
+
+// ignore: avoid_relative_lib_imports
+import '../lib/name.dart';
 
 void main() {
   test('that the Name class works', () {

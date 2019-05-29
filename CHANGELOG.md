@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Fix package definition error in example directory
+
 ## 1.0.6
 
 - Include example directory in analysis
