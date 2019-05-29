@@ -1,3 +1,8 @@
+## 1.0.6
+
+- Include example directory in analysis
+- Add example directory dependencies as root package dev_dependencies
+
 ## 1.0.5
 
 - Remove some notes from 1.0.4 that were based on misunderstanding of other packages' functionality
