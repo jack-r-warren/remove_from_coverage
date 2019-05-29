@@ -41,6 +41,4 @@ Code coverage reports are generated from an `lcov.info` file, which is generated
 
 In some cases, it might make sense to have some files excluded from code coverage reports, like generated or experimental files. Some generators of `lcov.info` files might support excluding files, but `remove_from_coverage` provides another route: after a `lcov.info` file has been generated, it can be manipulated to remove data relating to ignored files.
 
-> Note: I recommend double-checking that your test coverage generator doesn't already support the type of exclusion you're looking for. Since this package was released, some test coverage packages have been updated to provide better exclusion functionality.
-
 This means that `remove_from_coverage` is agnostic to both how the `lcov.info` file is generated or how it is used. It may be used for non-Dart projects, and it has been tested on both Linux and Windows.
