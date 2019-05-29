@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Remove some notes from 1.0.4 that were based on misunderstanding of other packages' functionality
+
 ## 1.0.4
 
 - Documentation updates to direct users to double-check that they can't directly exclude files during coverage generation
