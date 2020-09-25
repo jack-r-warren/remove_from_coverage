@@ -14,7 +14,7 @@ Remove files with paths matching given PATTERNs from the lcov.info FILE
 
 The patterns are used to construct `RegExp` objects, so `-r '.g.dart$'` becomes `RegExp('.g.dart$')`. Multiple patterns may be provided by either providing `-r` multiple times or by using comma-separation, like `-r '.g.dart$', 'main.dart'`. When evaluating a file's entry in the `lcov.info`, if its path matches any pattern it will be excluded. The paths are relative from the project's root.
 
-If a `lcov.info` file is not provided via thr `-f` flag, `stdin` input is run through the program's filter and is sent to `stdout`.
+If a `lcov.info` file is not provided via the `-f` flag, `stdin` input is run through the program's filter and is sent to `stdout`.
 
 ## Example
 Suppose you want to remove generated files ending in `.g.dart` from code coverage reports:
