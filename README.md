@@ -12,7 +12,7 @@ Remove files with paths matching given PATTERNs from the lcov.info FILE
 -h, --help                show this help
 ```
 
-The patterns are used to construct `RegExp` objects, so `-r '.g.dart$'` becomes `RegExp('.g.dart$')`. Multiple patterns may be provided by either providing `-r` multiple times or by using comma-separation, like `-r '.g.dart$', 'main.dart'`. When evaluating a file's entry in the `lcov.info`, if its path matches any pattern it will be excluded. The paths are relative from the project's root.
+The patterns are used to construct `RegExp` objects, so `-r '\.g\.dart$'` becomes `RegExp('\.g\.dart$')`. Multiple patterns may be provided by either providing `-r` multiple times or by using comma-separation, like `-r '\.g\.dart$', 'main\.dart'`. When evaluating a file's entry in the `lcov.info`, if its path matches any pattern it will be excluded. The paths are relative from the project's root.
 
 If a `lcov.info` file is not provided via the `-f` flag, `stdin` input is run through the program's filter and is sent to `stdout`.
 
@@ -20,18 +20,18 @@ If a `lcov.info` file is not provided via the `-f` flag, `stdin` input is run th
 Suppose you want to remove generated files ending in `.g.dart` from code coverage reports:
 
 - We'll target the `lcov.info` file in the `coverage` directory
-- We'll use `.g.dart$` as the pattern
+- We'll use `\.g\.dart$` as the pattern
 
 If [`pub global` scripts are on your path](https://dart.dev/tools/pub/cmd/pub-global#running-a-script-from-your-path), you can use the following:
 
 ```bash
-remove_from_coverage -f coverage/lcov.info -r '.g.dart$'
+remove_from_coverage -f coverage/lcov.info -r '\.g\.dart$'
 ```
 
 Otherwise, [you can use the following](https://dart.dev/tools/pub/cmd/pub-global#running-a-script-using-pub-global-run):
 
 ```bash
-pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '.g.dart$'
+pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '\.g\.dart$'
 ```
 
 An entire example project where `remove_from_coverage` is useful exists in the [`example` directory of the package](https://github.com/jack-r-warren/remove_from_coverage/tree/master/example).
