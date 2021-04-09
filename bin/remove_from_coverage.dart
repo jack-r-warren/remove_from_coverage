@@ -13,7 +13,7 @@ import 'package:args/args.dart' as a;
 /// -r, --remove=<PATTERN>    a pattern of paths to exclude from coverage
 /// -h, --help                show this help
 /// ```
-main(List<String> arguments) {
+void main(List<String> arguments) {
   final parser = a.ArgParser()
     ..addSeparator(
         'Remove files with paths matching given PATTERNs from the lcov.info FILE')
@@ -36,11 +36,11 @@ main(List<String> arguments) {
     exit(0);
   }
 
-  final List<RegExp> patterns = (args['remove'] as List<String>)
-      .map((String s) => RegExp(s))
+  final patterns = (args['remove'] as List<String>)
+      .map((s) => RegExp(s))
       .toList(growable: false);
 
-  bool keep = true;
+  var keep = true;
   final keeper = (String s) {
     if (s.startsWith('SF:') &&
         patterns.any((RegExp r) => r.hasMatch(s.substring(3)))) {
@@ -61,7 +61,7 @@ main(List<String> arguments) {
         .transform(utf8.encoder)
         .pipe(stdout);
   } else {
-    final File f = File(args['file']);
+    final f = File(args['file']);
     f.readAsLines().then(
         (List<String> los) => f.writeAsString(los.where(keeper).join('\n')));
   }
