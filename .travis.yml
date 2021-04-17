@@ -8,14 +8,12 @@ stages:
     if: tag =~ ^([0-9]+\.){2,}[0-9]+$
 jobs:
   include:
-    - stage: setup
-      name: "dependencies"
-      script: cd example && pub get
     - name: "formatting"
       script: dartfmt --dry-run --set-exit-if-changed .
     - name: "static analysis"
+      before_script: cd example && pub get && cd ..
       script: dartanalyzer .
     - stage: deploy
       name: "deploy to pub"
-      before_script: chmod +x tool/deploy.sh
+      before_script: chmod +x tool/deploy.sh && cd example && pub get
       script: tool/deploy.sh
