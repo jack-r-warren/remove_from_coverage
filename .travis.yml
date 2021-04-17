@@ -11,7 +11,7 @@ jobs:
     - name: "formatting"
       script: dartfmt --dry-run --set-exit-if-changed .
     - name: "static analysis"
-      before_script: cd example && pub get
+      before_script: cd example && pub get && cd ..
       script: dartanalyzer .
     - stage: deploy
       name: "deploy to pub"
