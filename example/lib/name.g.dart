@@ -14,19 +14,14 @@ class _$Name extends Name {
   @override
   final String last;
 
-  factory _$Name([void Function(NameBuilder) updates]) =>
+  factory _$Name([void Function(NameBuilder)? updates]) =>
       (new NameBuilder()..update(updates)).build();
 
-  _$Name._({this.first, this.middle, this.last}) : super._() {
-    if (first == null) {
-      throw new BuiltValueNullFieldError('Name', 'first');
-    }
-    if (middle == null) {
-      throw new BuiltValueNullFieldError('Name', 'middle');
-    }
-    if (last == null) {
-      throw new BuiltValueNullFieldError('Name', 'last');
-    }
+  _$Name._({required this.first, required this.middle, required this.last})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(first, 'Name', 'first');
+    BuiltValueNullFieldError.checkNotNull(middle, 'Name', 'middle');
+    BuiltValueNullFieldError.checkNotNull(last, 'Name', 'last');
   }
 
   @override
@@ -62,27 +57,28 @@ class _$Name extends Name {
 }
 
 class NameBuilder implements Builder<Name, NameBuilder> {
-  _$Name _$v;
+  _$Name? _$v;
 
-  String _first;
-  String get first => _$this._first;
-  set first(String first) => _$this._first = first;
+  String? _first;
+  String? get first => _$this._first;
+  set first(String? first) => _$this._first = first;
 
-  String _middle;
-  String get middle => _$this._middle;
-  set middle(String middle) => _$this._middle = middle;
+  String? _middle;
+  String? get middle => _$this._middle;
+  set middle(String? middle) => _$this._middle = middle;
 
-  String _last;
-  String get last => _$this._last;
-  set last(String last) => _$this._last = last;
+  String? _last;
+  String? get last => _$this._last;
+  set last(String? last) => _$this._last = last;
 
   NameBuilder();
 
   NameBuilder get _$this {
-    if (_$v != null) {
-      _first = _$v.first;
-      _middle = _$v.middle;
-      _last = _$v.last;
+    final $v = _$v;
+    if ($v != null) {
+      _first = $v.first;
+      _middle = $v.middle;
+      _last = $v.last;
       _$v = null;
     }
     return this;
@@ -90,21 +86,24 @@ class NameBuilder implements Builder<Name, NameBuilder> {
 
   @override
   void replace(Name other) {
-    if (other == null) {
-      throw new ArgumentError.notNull('other');
-    }
+    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Name;
   }
 
   @override
-  void update(void Function(NameBuilder) updates) {
+  void update(void Function(NameBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
   _$Name build() {
-    final _$result =
-        _$v ?? new _$Name._(first: first, middle: middle, last: last);
+    final _$result = _$v ??
+        new _$Name._(
+            first:
+                BuiltValueNullFieldError.checkNotNull(first, 'Name', 'first'),
+            middle:
+                BuiltValueNullFieldError.checkNotNull(middle, 'Name', 'middle'),
+            last: BuiltValueNullFieldError.checkNotNull(last, 'Name', 'last'));
     replace(_$result);
     return _$result;
   }

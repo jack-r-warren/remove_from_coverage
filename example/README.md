@@ -17,13 +17,13 @@ In `test`, `name_test.dart` covers the functionality we desire from this package
 ### The Problem
 Our test in `name_test.dart` is sufficient for our testing of `name.dart`, but code coverage packages would also evaluate the coverage of `name.g.dart`. There might be cases where we'd want to test everything in that generated file, but if we don't, that generated file might have very few lines covered.
 
-Suppose we use the [`test_coverage`](https://pub.dev/packages/test_coverage) package to generate coverage statistics:
+Suppose we use the [`test_cov`](https://pub.dev/packages/test_cov) package to generate coverage statistics:
 
 ```bash
-pub run test_coverage
+dart run test_cov
 ```
 
-We're told that the code coverage is only 46% and the output `lcov.info` file is saved to the `coverage` directory.
+We're told that the code coverage is only 56.9% and the output `lcov.info` file is saved to the `coverage` directory.
 
 ### The Solution
 
@@ -38,7 +38,7 @@ remove_from_coverage -f coverage/lcov.info -r '.g.dart$'
 Otherwise, [you can use the following](https://dart.dev/tools/pub/cmd/pub-global#running-a-script-using-pub-global-run):
 
 ```bash
-pub global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '.g.dart$'
+dart global run remove_from_coverage:remove_from_coverage -f coverage/lcov.info -r '.g.dart$'
 ```
 
 Now, `lcov.info` shows only the files we desire, so any reports/percentages generates from it will now be correct.
