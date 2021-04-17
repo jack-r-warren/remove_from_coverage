@@ -15,5 +15,5 @@ jobs:
       script: dart analyze
     - stage: deploy
       name: "deploy to pub"
-      before_script: chmod +x tool/deploy.sh && cd example && pub get
+      before_script: chmod +x tool/deploy.sh && cd example && pub get && cd ..
       script: tool/deploy.sh
